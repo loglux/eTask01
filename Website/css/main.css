@@ -1,0 +1,15 @@
+/* Smooth lift-up animation on product cards */
+.product-card {
+    /* Transition defines what and how smoothly will animate */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    /* Optional: create a new stacking context so shadows don’t clip */
+    will-change: transform, box-shadow;
+}
+
+.product-card:hover,
+.product-card:focus-within {
+    /* Slight lift */
+    transform: translateY(-4px);
+    /* Soft shadow */
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}

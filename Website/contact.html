@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Basic page setup -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Student Tech - Contact</title>
+
+    <!-- Bootstrap CSS (CDN) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Your custom styles -->
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+<!-- Navigation bar (same across all pages) -->
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">Student Tech</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <!-- Mark current page as active -->
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+                <li class="nav-item"><a class="nav-link" href="deals.html">Student Deals</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Page content -->
+<div class="container mt-4">
+
+    <h1>Contact Us</h1>
+    <p class="text-muted">Send us a message and we will get back to you shortly.</p>
+
+    <!-- Success alert (hidden by default) -->
+    <div id="formAlert" class="alert alert-success d-none" role="alert">
+        Thanks! Your message has been sent. We will reply soon.
+    </div>
+
+    <!-- Contact form -->
+    <!-- novalidate disables the browser's default tooltips so we can style feedback with Bootstrap -->
+    <form id="contactForm" class="needs-validation col-md-6" novalidate>
+        <!-- Name -->
+        <div class="mb-3">
+            <label for="name" class="form-label">Name*</label>
+            <input
+                    type="text"
+                    class="form-control"
+                    id="name"
+                    name="name"
+                    placeholder="Your full name"
+                    required
+                    minlength="2"
+                    aria-describedby="nameHelp">
+            <div id="nameHelp" class="form-text">Please enter your full name.</div>
+            <div class="invalid-feedback">Name is required (minimum 2 characters).</div>
+        </div>
+
+        <!-- Email -->
+        <div class="mb-3">
+            <label for="email" class="form-label">Email*</label>
+            <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    name="email"
+                    placeholder="name@example.com"
+                    required
+                    aria-describedby="emailHelp">
+            <div id="emailHelp" class="form-text">We will only use your email to contact you.</div>
+            <div class="invalid-feedback">Please enter a valid email address.</div>
+        </div>
+
+        <!-- Message -->
+        <div class="mb-3">
+            <label for="message" class="form-label">Message*</label>
+            <textarea
+                    class="form-control"
+                    id="message"
+                    name="message"
+                    rows="4"
+                    placeholder="How can we help?"
+                    required
+                    minlength="20"></textarea>
+            <div class="invalid-feedback">Message must be at least 20 characters.</div>
+        </div>
+
+        <!-- Optional consent checkbox -->
+        <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="consent">
+            <label class="form-check-label" for="consent">I agree to be contacted about my enquiry</label>
+        </div>
+
+        <button class="btn btn-primary" type="submit">Send message</button>
+    </form>
+</div>
+
+<!-- Bootstrap JS bundle (includes Popper) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Inline script for form validation (you can move this to js/main.js) -->
+<script src="js/main.js"></script>
+
+</body>
+</html>
